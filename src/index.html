@@ -7,6 +7,7 @@
   <title>TreeGen</title>
   <meta name="description" content="Tree generator">
   <meta name="author" content="Anastasia Videneeva">
+  <link rel="stylesheet" href="css/spectrum.css" />
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -22,17 +23,30 @@
       <canvas id="canvas" width="800" height="600"></canvas>
       <div class="controls">
         <button class="controls__generate-btn" type="button">Generate</button>
-        <div class="controls-wrapper">CONTROLS</div>
-        <p>
-          <label for="amount">Angle range(deg):</label>
-          <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-        </p>
-         
-        <div id="slider-range"></div>
+        <div class="controls-wrapper">
+          <h2>Settings</h2>
+          <div class="leaves-coor">
+            <label for="leaves-color">Leaves color:</label>
+            <input type='text' id="leaves-color" value="#469105" />
+          </div>
+          <div class="branch-coor">
+            <label for="branch-color">Branches color:</label>
+            <input type='text' id="branch-color" value="#000000" />
+          </div>
+
+          <div class="branch-angle">
+            <p>
+              <label for="agle">Branch angle (degrees):</label>
+              <input type="text" id="agle" readonly style="border:0; color:#f6931f; font-weight:bold;">
+            </p> 
+            <div id="slider-range"></div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
   <footer>Footer</footer>
+  <script src="js/spectrum.js"></script>
   <script src="js/controls.js"></script>
   <script src="js/script.js"></script>
 </body>

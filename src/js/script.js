@@ -8,9 +8,10 @@ $(document).ready(() => {
         ctx.moveTo(x0, y0);
         ctx.lineTo(x1, y1);
         if (width < 2) {
-            ctx.strokeStyle = "#469105";
+            // ctx.strokeStyle = "#469105";
+            ctx.strokeStyle = $("#leaves-color").val();
         } else {
-            ctx.strokeStyle = "black";
+            ctx.strokeStyle = ctx.strokeStyle = $("#branch-color").val();;
         }
         ctx.stroke();
     }
@@ -32,9 +33,6 @@ $(document).ready(() => {
     }
 
     // drawTree(390, 550, 120, 0, 10);
-
-    const MIN_ANGLE = $( "#slider-range" ).slider( "values", 0 );
-    const MAX_ANGLE = $( "#slider-range" ).slider( "values", 1 );
 
     const getRandomLenCoef = (min = 0.40, max = 0.95) => {
         return Math.random() * (max - min) + min;
@@ -60,7 +58,7 @@ $(document).ready(() => {
 
         const newWidth = width * 0.75 > 1 ? width * 0.75 : 1;
 
-        if (len > 4 && (x1 > PADDING) && (y1 > PADDING)
+        if (len > 3 && (x1 > PADDING) && (y1 > PADDING)
              && (x1 < canvas.width - PADDING) && (y1 < canvas.height - PADDING)) {
             drawLine(x0, y0, x1, y1, width);
             drawRandomTree(x1, y1, len * getRandomLenCoef(), angle + getRandomAngle(), newWidth);
