@@ -1,0 +1,30 @@
+#canvas {
+    border: 2px solid black;
+}
+
+.content {
+    display: flex;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.controls__generate-btn {
+    width: 400px;
+    font-size: 30px;
+    color: #ffffff;
+    background-color: #469105;
+    border: none;
+    outline: none;
+}
+
+.controls__generate-btn:hover {
+    background-color: #427516;
+}
+
+.controls__generate-btn:active {
+    opacity: 0.3;
+}
