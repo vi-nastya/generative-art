@@ -98,8 +98,4 @@ const drawRandomTree = (x0, y0, len, angle, width) => {
 
 //drawRandomTree(390, 550, 120, 0, 10);
 
-const generateBtn = document.querySelector('.controls__generate-btn');
-generateBtn.addEventListener('click', () => {
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
-    drawRandomTree(390, 550, 120, 0, 10);
-});
+
