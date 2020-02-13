@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(() => {
   $(".loading").fadeOut("slow");
   $(".controls-wrapper").hide();
 
