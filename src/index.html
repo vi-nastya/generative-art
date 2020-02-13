@@ -7,9 +7,10 @@
   <title>TreeGen</title>
   <meta name="description" content="Tree generator">
   <meta name="author" content="Anastasia Videneeva">
-
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -22,11 +23,17 @@
       <div class="controls">
         <button class="controls__generate-btn" type="button">Generate</button>
         <div class="controls-wrapper">CONTROLS</div>
+        <p>
+          <label for="amount">Angle range(deg):</label>
+          <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+        </p>
+         
+        <div id="slider-range"></div>
       </div>
     </div>
   </main>
   <footer>Footer</footer>
-  <script src="js/script.js"></script>
   <script src="js/controls.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
