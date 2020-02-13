@@ -52,13 +52,17 @@ $(document).ready(() => {
         return Math.random() * (max - min) + min;
     }
 
+    const PADDING = 15;
+
     const drawRandomTree = (x0, y0, len, angle, width) => {
         const x1 = x0 + Math.sin(angle) * len;
         const y1 = y0 - Math.cos(angle) * len;
-        drawLine(x0, y0, x1, y1, width);
 
         const newWidth = width * 0.75 > 1 ? width * 0.75 : 1;
-        if (len > 4) {
+
+        if (len > 4 && (x1 > PADDING) && (y1 > PADDING)
+             && (x1 < canvas.width - PADDING) && (y1 < canvas.height - PADDING)) {
+            drawLine(x0, y0, x1, y1, width);
             drawRandomTree(x1, y1, len * getRandomLenCoef(), angle + getRandomAngle(), newWidth);
             drawRandomTree(x1, y1, len * getRandomLenCoef(), angle - getRandomAngle(), newWidth);
             if (Math.random() > 0.7) {
