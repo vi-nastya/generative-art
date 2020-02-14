@@ -36,23 +36,27 @@ const START_ANGLE = 0;
 const START_WIDTH = 10;
 const LEAVES_WIDTH = 2;
 
+const removeTree = () => {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  currentTree = [];
+}
+
 // buttons
 $('.controls__btn--generate').click(() => {
   $('.controls-wrapper').slideDown("slow");
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  currentTree = [];
+  removeTree();
+
   const leavesColor = $("#leaves-color").val();
   const branchesColor = $("#branch-color").val();
   const minAngle = $( "#slider-range" ).slider( "values", 0 );
   const maxAngle = $( "#slider-range" ).slider( "values", 1 );
-  // TODO: get new angle
+
   generateRandomTree(currentTree, START_X, START_Y, START_LENGTH, START_ANGLE, START_WIDTH, minAngle, maxAngle);
   drawTree(ctx, currentTree, LEAVES_WIDTH, leavesColor, branchesColor);
   });
 
 $('.controls__btn--clear').click(() => {
-  currentTree = [];
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  removeTree();
 });
 
 const saveBtn = $('.controls__btn--save');
