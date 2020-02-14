@@ -15,7 +15,8 @@
   outline: none;
 
   &--generate {
-    width: 400px;
+    width: 90%;
+    margin-top: 30px;
     margin-bottom: 30px;
     background-color: #469105;
 
@@ -31,7 +32,6 @@
   &--save {
     display: inline-block;
     text-align: center;
-    margin-top: 30px;
 
     background-color: rgb(4, 121, 156);
     opacity: 0.6;

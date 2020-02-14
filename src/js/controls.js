@@ -1,6 +1,10 @@
 $(document).ready(() => {
-  $(".loading").fadeOut("slow");
   $(".controls-wrapper").hide();
+
+  $('.controls__btn--start').click(() => {
+    $('.controls-wrapper').slideDown("slow");
+    $('.controls__btn--start').hide();
+  });
 
   $("#leaves-color").spectrum({
     preferredFormat: "hex"
@@ -43,7 +47,6 @@ const removeTree = () => {
 
 // buttons
 $('.controls__btn--generate').click(() => {
-  $('.controls-wrapper').slideDown("slow");
   removeTree();
 
   const leavesColor = $("#leaves-color").val();
