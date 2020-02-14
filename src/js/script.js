@@ -80,7 +80,13 @@ $(document).ready(() => {
 
     $('.controls__btn--clear').click(() => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-    })
+    });
+
+    const saveBtn = $('.controls__btn--save');
+    saveBtn.click(() => {
+        saveBtn.attr("href", canvas.toDataURL());
+        saveBtn.attr("download", "my-tree.png");
+    });
 
     const getParamsDrawTree = () => {
         // get interface params
