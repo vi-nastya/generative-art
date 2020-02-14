@@ -72,12 +72,15 @@ $(document).ready(() => {
         }
     }
 
-    $('.controls__generate-btn').click(() => {
+    $('.controls__btn--generate').click(() => {
         $('.controls-wrapper').slideDown("slow");
-        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         drawRandomTree(390, 550, 120, 0, 10);
       });
 
+    $('.controls__btn--clear').click(() => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    })
 
     const getParamsDrawTree = () => {
         // get interface params

@@ -4,24 +4,55 @@
   padding: 25px;
 }
 
-.controls__generate-btn {
-  width: 400px;
+.controls__btn {
+  width: 250px;
   margin-bottom: 30px;
   
   font-size: 30px;
   color: #ffffff;
-  background-color: #469105;
+  background-color: blueviolet;
   border: none;
   border-radius: 5px;
   outline: none;
-}
 
-.controls__generate-btn:hover {
-  background-color: #427516;
-}
+  &--generate {
+    width: 400px;
+    background-color: #469105;
 
-.controls__generate-btn:active {
-  opacity: 0.3;
+    &:hover {
+      background-color: #427516;
+    }
+    
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &--save {
+    background-color: rgb(4, 121, 156);
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+    
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &--clear {
+    background-color: red;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+    
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 .controls-wrapper {
