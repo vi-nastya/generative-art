@@ -77,8 +77,17 @@ $(document).ready(() => {
         ctx.clearRect(0, 0, canvas.width, canvas.height)
         drawRandomTree(390, 550, 120, 0, 10);
       });
+
+
+    const getParamsDrawTree = () => {
+        // get interface params
+        // generate tree and store in an array
+        // draw tree
+        // ??? mb this function needs to receive callback as an argument - hide "loading" spinner
+    }
 });
 
 //drawRandomTree(390, 550, 120, 0, 10);
+
 
 

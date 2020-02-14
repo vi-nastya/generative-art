@@ -1,0 +1,12 @@
+#canvas {
+  width: 100%;
+  border: 2px solid black;
+}
+
+.content {
+  display: flex;
+}
+
+.content__canvas-wrapper {
+  position: relative;
+}

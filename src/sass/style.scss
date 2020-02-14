@@ -1,3 +1,9 @@
+@import "global.scss";
+@import "variables.scss";
+@import "blocks/loading-spinner.scss";
+@import "blocks/content.scss";
+@import "blocks/controls.scss";
+
 .loading {
   position: fixed;
   z-index: 10;
@@ -7,52 +13,4 @@
   width: 600px;
   color: red;
   background-color: white;
-}
-
-
-#canvas {
-  border: 2px solid black;
-}
-
-.content {
-  display: flex;
-}
-
-.controls {
-  display: flex;
-  flex-direction: column;
-  padding: 25px;
-}
-
-.controls__generate-btn {
-  width: 400px;
-  margin-bottom: 30px;
-  
-  font-size: 30px;
-  color: #ffffff;
-  background-color: #469105;
-  border: none;
-  border-radius: 5px;
-  outline: none;
-}
-
-.controls__generate-btn:hover {
-  background-color: #427516;
-}
-
-.controls__generate-btn:active {
-  opacity: 0.3;
-}
-
-.controls-wrapper {
-  width: 300px;
-  height: 300px;
-  background-color: yellow;
-}
-
-#angle {
-  font-weight: bold;
-
-  border: 0;
-  background: transparent;
 }
