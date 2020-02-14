@@ -1,9 +1,11 @@
 $(document).ready(() => {
   $(".controls-wrapper").hide();
+  $('.loading-spinner').hide();
 
   $('.controls__btn--start').click(() => {
     $('.controls-wrapper').slideDown("slow");
     $('.controls__btn--start').hide();
+    $('.loading-spinner').show();
   });
 
   $("#leaves-color").spectrum({
@@ -18,7 +20,7 @@ $(document).ready(() => {
     range: true,
     min: 0,
     max: 90,
-    values: [ 15, 70 ],
+    values: [ 15, 60 ],
     slide: ( event, ui ) => {
       $( "#angle" ).val( ui.values[ 0 ] + " deg - " + ui.values[ 1 ] + " deg");
     }
@@ -34,8 +36,8 @@ const ctx = canvas.getContext('2d');
 let currentTree = [];
 
 const START_X = 390;
-const START_Y = 550;
-const START_LENGTH = 120;
+const START_Y = 520;
+const START_LENGTH = 100;
 const START_ANGLE = 0;
 const START_WIDTH = 10;
 const LEAVES_WIDTH = 2;
@@ -47,6 +49,8 @@ const removeTree = () => {
 
 // buttons
 $('.controls__btn--generate').click(() => {
+  $('.loading-spinner').hide();
+
   removeTree();
 
   const leavesColor = $("#leaves-color").val();
